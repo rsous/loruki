@@ -5,6 +5,8 @@
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
   --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 * {
@@ -49,6 +51,13 @@ p {
 
 img {
   width: 100%;
+}
+
+code,
+pre {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
 }
 
 /* Navbar */
@@ -227,6 +236,84 @@ img {
   transform: translateY(-1rem);
 }
 
+/* Features */
+.features-head img,
+.docs-head img {
+  width: 20rem;
+  justify-self: flex-end;
+}
+
+.features-sub-head img {
+  width: 30rem;
+  justify-self: flex-end;
+}
+
+.features-sub-head p {
+  font-size: 1.6rem;
+}
+
+.features-main .card > i {
+  margin-right: 2rem;
+  font-size: 4.5rem;
+}
+
+.features-main .grid {
+  padding: 3rem;
+}
+
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+.features-main p {
+  font-size: 1.6rem;
+}
+
+/* Docs */
+.docs-main p,
+.docs-main i,
+.docs-main a,
+.docs-main li {
+  font-size: 1.6rem;
+}
+
+.docs-main code {
+  font-size: 1.4rem;
+}
+
+.docs-main h2 {
+  font-size: 2.4rem;
+}
+
+.docs-main h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 1.7rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+.alert {
+  font-size: 1.6rem;
+}
+
 /* Footer */
 .footer > * {
   font-size: 1.6rem;
@@ -288,7 +375,9 @@ img {
   .showcase .grid,
   .stats .grid,
   .cli .grid,
-  .cloud .grid {
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -334,6 +423,31 @@ img {
 
   .footer .social {
     justify-self: center;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .docs-head h1 {
+    font-size: 4.8rem;
+  }
+
+  .features-main .grid {
+    width: 90%;
   }
 }
 
@@ -403,5 +517,38 @@ img {
 
   .footer ul {
     display: inline-block;
+  }
+
+  .docs-head h1 {
+    font-size: 3.4rem;
+  }
+  .features-head h1 {
+    font-size: 3.4rem;
+  }
+
+  .docs-head .grid img {
+    width: 12rem;
+  }
+
+  .features-head .grid img {
+    width: 12rem;
+  }
+
+  .features-sub-head .grid img {
+    width: 20rem;
+  }
+
+  .features-main .card {
+    flex-direction: column;
+  }
+
+  .features-main .card i {
+    font-size: 4rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .features-main .card p {
+    font-size: 1.4rem;
   }
 }
