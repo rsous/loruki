@@ -102,6 +102,10 @@ pre {
   font-size: 4rem;
 }
 
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
 .showcase-text p,
 .showcase-text a {
   font-size: 1.6rem;
@@ -119,6 +123,7 @@ pre {
   padding: 4rem;
   z-index: 100;
   justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in-out;
 }
 
 .showcase-form h2 {
@@ -168,6 +173,7 @@ pre {
   padding-top: 10rem;
   font-size: 1.6rem;
   margin: 4rem 0;
+  animation: slideInFromBottom 1s ease-in-out;
 }
 
 .stats-heading {
@@ -367,6 +373,47 @@ pre {
 .copy {
   grid-column: 1 / -1;
   justify-self: center;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Tablets and under */
